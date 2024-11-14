@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7814FF;
+}
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+fieldset {
+    border-radius: 10px;
+    border-color: #7814FF;
+}
+legend {
+    font-size: 20px;
+    text-align: center;
+}
+.nomeArea {
+    margin-left: 10px;
+    width: 55px;
+    /* border: 1px solid green; */
+}
+.automovel {
+    margin: 15px;
+    margin-left: 10px;
+    display: flex;
+    position: relative;
+}
+.info {
+    margin-top: -10px;
+    display: flex;
+    /* border: 1px solid black; */
+}
+/* .info p {
+    border: 1px solid teal;
+} */
+.modelo, .preco {
+    margin: 5px;
+    margin-top: -10px;
+    /* border: 1px solid firebrick; */
+}
+.button {
+    color: white;
+    box-sizing: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #7814FF;
+    top: -10px;
+    margin-left: 30px;
+    position: relative;
+    height: 25px;
+    padding: 2px 10px 2px 10px;
+    cursor: pointer;
+    /* border: 1px solid gold; */
+}

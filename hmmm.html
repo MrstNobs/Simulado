@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            border: 1.5px solid #000;
+            padding: 20px;
+            color: #7814FF;
+            display: flex;
+            flex-direction: column;
+            background-color: #f8f8f8;
+            width: 300px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        
+        .nomeArea {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #7814FF;
+        }
+        
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .infoAuto {
+            font-size: 16px;
+            color: #7814FF;
+        }
+        
+        .button {
+            color: #FFF;
+            font-size: 15px;
+            background-color: #7814FF;
+            border-radius: 5px;
+            box-shadow: none;
+            border: none;
+            padding: 5px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+        <div class="nomeArea">
+            Área 10
+        </div>
+
+        <div class="item">
+
+            <span class="infoAuto">Modelo: XYZ | Preço: R$ XXX.XXX,XX</span>
+
+            <button class="button">Vender</button>
+
+        </div>
+
+        <div class="item">
+
+            <span class="infoAuto">Modelo: XYZ5 | Preço: R$ XXX.XXX,XX</span>
+
+            <button class="button">Vender</button>
+
+        </div>
+
+        <div class="item">
+
+            <span class="infoAuto">Modelo: XYZ9 | Preço: R$ XXX.XXX,XX</span>
+
+            <button class="button">Vender</button>
+
+        </div>
+
+    </div>
+</body>
+</html>

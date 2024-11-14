@@ -1,0 +1,53 @@
+body{ 
+    font-family: Arial, Helvetica, sans-serif;
+    color: #7814FF;
+}
+.box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+fieldset {
+    align-items: center;
+    justify-content: center;
+    border-color: #7814FF;
+    border-radius: 10px;
+}
+legend {
+    text-align: center;
+    font-size: 20px;
+}
+.nomeModelo {
+    display: flex;
+}
+.cliente {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+.concessionaria {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cliente p, .concessionaria p {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.btn {
+    display: flex;
+}
+.buttom {
+    margin: 15px auto;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #7814FF;
+    color: #FFF;
+    font-size: 18px;
+}
