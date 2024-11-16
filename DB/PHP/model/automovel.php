@@ -15,9 +15,9 @@
                 die("Erro ao tentar listar todos os automoveis: ". $ex->getMessage());
                 return false;
             }
-
         }
 
-    }
+        
 
+    }
 ?>

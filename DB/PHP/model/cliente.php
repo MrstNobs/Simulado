@@ -3,7 +3,6 @@
     class Cliente {
 
         public function SelectAllCliente() {
-
             try {
                 $sql = "SELECT * FROM cliente";
                 $stmt = Conexao::getConexao()->prepare($sql);
@@ -11,9 +10,7 @@
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                 return $result;
-            }
-
-            catch (Exception $ex) {
+            } catch (Exception $ex) {
                 die("Erro ao tentar listar todos os clientes". $ex->getMessage());
                 return false;
             }
@@ -40,7 +37,7 @@
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
 
-        public function autalizarCliente($id, $nome) {
+        public function atualizarCliente($id, $nome) {
             $pdo = Conexao::getConexao();
 
             $sql = "UPDATE cliente SET nome = :nome WHERE id = :id";
