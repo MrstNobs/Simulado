@@ -3,7 +3,7 @@
     include '../model/Conexao.php';
     include '../model/cliente.php';
 
-    $kaua = new Cliente();
+    $kaua = new Cliente;
 
     // echo '-- Método criarCliente() -- <br>';
     // $kaua->criaCliente('kaua daniel cardoso de brito');
