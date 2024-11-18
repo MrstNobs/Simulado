@@ -1,3 +1,4 @@
+/*
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #7814FF;
@@ -22,7 +23,7 @@ legend {
 .nomeArea {
     margin-left: 10px;
     width: 55px;
-    /* border: 1px solid green; */
+    /* border: 1px solid green; 
 }
 .automovel {
     margin: 15px;
@@ -33,15 +34,15 @@ legend {
 .info {
     margin-top: -10px;
     display: flex;
-    /* border: 1px solid black; */
+    /* border: 1px solid black; 
 }
 /* .info p {
     border: 1px solid teal;
-} */
+} 
 .modelo, .preco {
     margin: 5px;
     margin-top: -10px;
-    /* border: 1px solid firebrick; */
+    /* border: 1px solid firebrick; 
 }
 .button {
     color: white;
@@ -56,5 +57,5 @@ legend {
     height: 25px;
     padding: 2px 10px 2px 10px;
     cursor: pointer;
-    /* border: 1px solid gold; */
+    /* border: 1px solid gold; 
 }

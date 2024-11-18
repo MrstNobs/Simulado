@@ -1,40 +1,82 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url(../images/repeticao.png);
-}
-.box {
-    z-index: -1;
-    backdrop-filter: blur(4px);
-    border: 1.5px solid black;
-    position: absolute;
-    padding: 30px;
+    margin: 0;
+    padding: 0;
     display: flex;
-    background-color: rgb(51, 200, 202, 0.6);
-    left: 50%;
-    top:50%;
-    transform:  translate(-50%, -50%);
-    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Garante que o body preencha toda a tela */
+}
+
+.container {
+    display: flex; /* Organiza .box e .Area-Info lado a lado */
+    align-items: flex-start; /* Alinha os elementos no topo */
+    gap: 20px; /* Espaço entre .box e .Area-Info */
+}
+
+.box {
+    display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: rgba(51, 200, 202, 0.6);
+    border: 1.5px solid black;
+    border-radius: 10px;
+    max-width: 600px; /* Limita a largura da box */
 }
-.titulo {
-    position: inherit;
-    margin-top: -30px;
-    font-size: 20px;
-    left: 225px;
-    cursor: default;
-}
+
 .area {
-    position: relative;
     border: 1px solid rgb(131, 30, 255);
     padding: 20px;
-    transition: 2.5;
-    cursor: pointer;
-    margin-top: 40px;
     border-radius: 10px;
-    background-color: rgb(253, 253, 253, 0.8);
+    background-color: rgba(253, 253, 253, 0.8);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
+
 .area:hover {
     background-color: rgb(245, 236, 236);
     transform: scale(1.1);
+}
+
+.Area-Info {
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* Alinha o conteúdo entre a string e o botão */
+    align-items: center; /* Alinha verticalmente os itens */
+    padding: 20px;
+    width: 300px; /* Largura fixa para a área de informações */
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1.5px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.Area-Info.open{
+    visibility: visible;
+    opacity: 1;
+}
+
+#InfoAutomovel {
+    margin: 0; /* Remove margens padrão do label */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+}
+
+#vender {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#vender:hover {
+    background-color: #45a049;
 }
