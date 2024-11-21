@@ -6,13 +6,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Garante que o body preencha toda a tela */
+    height: 100vh; 
 }
 
 .container {
-    display: flex; /* Organiza .box e .Area-Info lado a lado */
-    align-items: flex-start; /* Alinha os elementos no topo */
-    gap: 20px; /* Espaço entre .box e .Area-Info */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* display: flex;
+    align-items: flex-start; 
+    gap: 20px;  */
 }
 
 .box {
@@ -29,37 +32,49 @@ body {
 }
 
 .area {
-    border: 1px solid rgb(131, 30, 255);
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #eaeaea;
+    transition: background-color 0.3s;
+    /* border: 1px solid rgb(131, 30, 255);
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(253, 253, 253, 0.8);
     cursor: pointer;
-    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; */
 }
 
 .area:hover {
-    background-color: rgb(245, 236, 236);
-    transform: scale(1.1);
+    background-color: #ccc;
+    /* background-color: rgb(245, 236, 236);
+    transform: scale(1.1); */
 }
 
 .Area-Info {
-    visibility: hidden;
+    display: none; /* Oculto por padrão */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    /* visibility: hidden;
     opacity: 0;
     position: relative;
     display: flex;
-    justify-content: space-between; /* Alinha o conteúdo entre a string e o botão */
-    align-items: center; /* Alinha verticalmente os itens */
+    justify-content: space-between; 
+    align-items: center; 
     padding: 20px;
-    width: 300px; /* Largura fixa para a área de informações */
+    width: 300px; 
     background-color: rgba(255, 255, 255, 0.9);
     border: 1.5px solid black;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
 }
 
 .Area-Info.open{
-    visibility: visible;
-    opacity: 1;
+    display: block;
+    /* visibility: visible;
+    opacity: 1; */
 }
 
 #InfoAutomovel {
