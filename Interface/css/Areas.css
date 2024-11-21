@@ -1,0 +1,96 @@
+/* Centralização da página */
+body {
+    display: flex; /* Usa Flexbox para centralizar o conteúdo */
+    justify-content: center; /* Alinha horizontalmente no centro */
+    align-items: center; /* Alinha verticalmente no centro */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    margin: 0; /* Remove a margem padrão */
+    background: linear-gradient(to right, rgb(63, 6, 113), rgb(66, 92, 239)); /* Fundo com gradiente */
+    font-family: Arial, sans-serif; /* Define a fonte da página */
+}
+
+/* Container principal */
+.main-container {
+    display: flex; /* Alinha o conteúdo dentro dele */
+    position: relative; /* Para posicionar elementos dentro dele */
+}
+
+/* Container das caixas (grid 2x5) */
+.container {
+    display: grid; /* Usando grid para o layout */
+    grid-template-columns: repeat(5, 150px); /* 5 colunas de 150px */
+    grid-template-rows: repeat(2, 150px); /* 2 linhas de 150px */
+    gap: 10px; /* Espaçamento entre as caixas */
+    justify-items: center; /* Alinha os itens no centro horizontalmente */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo da grid fique acima da janela lateral */
+}
+
+/* Estilo das caixas */
+.area {
+    width: 150px; /* Largura da caixa */
+    height: 150px; /* Altura da caixa */
+    background-color: #0000FF; /* Cor de fundo azul */
+    color: white; /* Cor do texto em branco */
+    display: flex; /* Flexbox para alinhar o conteúdo dentro da caixa */
+    justify-content: center; /* Alinha o conteúdo no centro horizontal */
+    align-items: center; /* Alinha o conteúdo no centro vertical */
+    font-size: 18px; /* Tamanho da fonte */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão para indicar que é clicável */
+    text-align: center; /* Alinha o texto no centro */
+    transition: 2.5; /* Animação de transição (não está completo) */
+}
+
+.area:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da caixa ao passar o mouse */
+}
+
+/* Janela lateral */
+.info-box-container {
+    position: absolute; /* Posiciona a janela fora da grid */
+    top: 0; /* Alinha no topo */
+    left: 101%; /* Coloca a janela à direita da grid */
+    width: 400px; /* Largura da janela lateral */
+    max-height: 100%; /* Define a altura máxima */
+    background-color: white; /* Cor de fundo branca */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave à esquerda */
+    padding: 20px; /* Espaçamento interno */
+    display: none; /* Inicialmente oculta */
+    flex-direction: column; /* Organiza os itens na vertical */
+    justify-content: flex-start; /* Alinha os itens no topo */
+    overflow-y: auto; /* Permite rolar verticalmente */
+    transition: transform 0.3s ease; /* Animação de deslizar */
+    transform: translateX(100%); /* Inicialmente oculta à direita */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.info-box h3 {
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    font-size: 20px; /* Tamanho do título */
+    color: #333; /* Cor do título */
+}
+
+.info-box p {
+    font-size: 16px; /* Tamanho do texto */
+    margin: 10px 0; /* Espaçamento acima e abaixo do parágrafo */
+}
+
+.info-box input[type="submit"] {
+    background-color: #28a745; /* Cor de fundo verde para o botão */
+    color: white; /* Cor do texto branco */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Cursor em forma de mão para botão */
+}
+
+.info-box input[type="submit"]:hover {
+    background-color: #218838; /* Cor do botão quando passa o mouse */
+}
+
+.vazio {
+    background-color: #fFF; /* Cor de fundo amarela para indicar área vazia */
+    color: #333; /* Cor do texto escuro */
+}
