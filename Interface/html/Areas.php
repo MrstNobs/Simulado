@@ -41,7 +41,7 @@
             <!-- É criado uma div(divisória) com classe 'area' onde ficara os veiculos desta area, depois é 
             aberto um PHP para pegar a variavel da area 1 {$area_1} e verificar se esta vazio, se esta variavel
             não conter nada então a classe 'vazio' será atribuida e o CSS entra em ação para mudar a cor, caso
-            conter algo dentro ele retornará o valor ''. e fceha o PHP-->
+            conter algo dentro ele retornará o valor '', e fceha o PHP-->
             <!-- O atributo data-info é um armazenamneto de strings -->
             <!-- Dentro do atributo 'data-info' é aberto outro PHP com uma condição de if else, 
             Se{if} a Variavel{$area_1} Nao{!} for Vazia{empty} então acontecar o que esta dentro de chaves{},
@@ -49,14 +49,20 @@
             <div class="area <?php echo (empty($area_1)) ? 'vazio': '';?> " data-info='
                 <?php if(!empty($area_1)) {
                     foreach($area_1 as $auto) { ?> 
-                        Modelo: <?=$auto['modelo']?> | Preço: R$<?=$auto['preco']?> <br>
+                        <form method="POST" action="telaVenda.php">
+                            Modelo: <?=$auto['modelo']?> | Preço: R$<?=$auto['preco']?> <br>
+
+                            <input type="hidden" name="id" value="<?=$auto['id']?>">
+                            <input type="hidden" name="modelo" value="<?=$auto['modelo']?>" >
+                            <input type="submit" value="Vender">
+                        </form>
                     <?php } ?>
                 <?php }  else { ?>
                     Nenhum Automovel
                     <?php } ?>
             '>Area 1</div>
 
-            <!-- O processo se repete, porém, no foreach ao invés de usar chaves é usado dois ponto e para fechar o foreach é necessario abrir o PHP e usar o comando endforach e fechar PHP -->
+            <!-- O processo se repete, porém, no foreach ao invés de usar chaves é usado dois ponto{:}, e para fechar o foreach é necessario abrir o PHP e usar o comando endforach e fechar PHP -->
             <div class="area <?php echo (empty($area_2)) ? 'vazio': '';?> " data-info='
                 <?php if(!empty($area_2)) {
                     foreach($area_2 as $auto): ?>

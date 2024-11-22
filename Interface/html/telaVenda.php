@@ -8,6 +8,12 @@
 
     $listCliente = $cliente->SelectAllCliente();
     $listCon = $concessionaria->selectAllConcessionaria();
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        $id = $_POST['id'];
+        $modelo = $_POST['modelo'];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -23,11 +29,11 @@
 <body>
     <main>
         <div class="box">
-            <form>
+            <form method="POST">
                 <fieldset>
                     <legend> Venda </legend>
                     <div class="nomeModelo">
-                        <p> *Nome-Modelo* </p>
+                        <p> <?= $modelo ?> </p>
                     </div>
                     <div class="cliente">
                         <label for="cliente"> Clientes: </label>
@@ -48,6 +54,7 @@
                         </select>
                     </div>
                     <div class="btn">
+                        <input type="hidden" value="<?= $id ?>">
                         <input type="submit" value="Confirmar" class="buttom">
                     </div>
                 </fieldset>

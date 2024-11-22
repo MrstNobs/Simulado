@@ -17,6 +17,7 @@
     $areaRelacionada = $Alocacao->BuscaRelacionada(10);
     foreach($areaRelacionada as $registro) {
         // echo 'Area: '. $registro['area']. ' | '. 'Modelo: '. $registro['modelo']. ' | '. 'Preço: R$'. $registro['preco']. '<br>';
+        var_dump($registro['id']);
     }
     
 ?>

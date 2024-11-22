@@ -33,7 +33,8 @@
                 $sql = "SELECT alocacao.area, 
                 alocacao.id AS alocacao_id, 
                 automoveis.modelo,
-                automoveis.preco FROM alocacao INNER JOIN automoveis ON alocacao.automovel = automoveis.id
+                automoveis.preco,
+                automoveis.id FROM alocacao INNER JOIN automoveis ON alocacao.automovel = automoveis.id
                 WHERE alocacao.area = :area";
                 $stmt = $pdo->prepare($sql);
                 $stmt->bindParam(':area', $area);
