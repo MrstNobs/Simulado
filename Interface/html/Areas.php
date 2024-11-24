@@ -8,16 +8,16 @@
 
     // Cria-se variavel para cada Area onde ficas os automoveis(no total de 10 areas), 
     // o parametro seria o número da area
-    $area_1 = $Alocacao->BuscaRelacionada(1);
-    $area_2 = $Alocacao->BuscaRelacionada(2);
-    $area_3 = $Alocacao->BuscaRelacionada(3);
-    $area_4 = $Alocacao->BuscaRelacionada(4);
-    $area_5 = $Alocacao->BuscaRelacionada(5);
-    $area_6 = $Alocacao->BuscaRelacionada(6);
-    $area_7 = $Alocacao->BuscaRelacionada(7);
-    $area_8 = $Alocacao->BuscaRelacionada(8);
-    $area_9 = $Alocacao->BuscaRelacionada(9);
-    $area_10 = $Alocacao->BuscaRelacionada(10);
+    $area_1 = $Alocacao->BuscarTabelas(1);
+    $area_2 = $Alocacao->BuscarTabelas(2);
+    $area_3 = $Alocacao->BuscarTabelas(3);
+    $area_4 = $Alocacao->BuscarTabelas(4);
+    $area_5 = $Alocacao->BuscarTabelas(5);
+    $area_6 = $Alocacao->BuscarTabelas(6);
+    $area_7 = $Alocacao->BuscarTabelas(7);
+    $area_8 = $Alocacao->BuscarTabelas(8);
+    $area_9 = $Alocacao->BuscarTabelas(9);
+    $area_10 = $Alocacao->BuscarTabelas(10);
 ?>
 
 <!DOCTYPE html>
@@ -50,10 +50,12 @@
                 <?php if(!empty($area_1)) {
                     foreach($area_1 as $auto) { ?> 
                         <form method="POST" action="telaVenda.php">
-                            Modelo: <?=$auto['modelo']?> | Preço: R$<?=$auto['preco']?> <br>
+                            Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
 
-                            <input type="hidden" name="id" value="<?=$auto['id']?>">
-                            <input type="hidden" name="modelo" value="<?=$auto['modelo']?>" >
+                            <input type="hidden" name="automoveis_id" value="<?=$auto['automoveis_id']?>">
+                            <input type="hidden" name="automoveis_modelo" value="<?=$auto['automoveis_modelo']?>">
+                            <input type="hidden" name="concessionarias_id" value="<?=$auto['concessionarias_id'] ?>">
+                            <input type="hidden" name="concessionarias_nome" value="<?=$auto['concessionarias_nome']?>">
                             <input type="submit" value="Vender">
                         </form>
                     <?php } ?>
@@ -66,7 +68,13 @@
             <div class="area <?php echo (empty($area_2)) ? 'vazio': '';?> " data-info='
                 <?php if(!empty($area_2)) {
                     foreach($area_2 as $auto): ?>
-                        Moldelo: <?=$auto['modelo']?> | Preço: R$<?=$auto['preco']?> <br>
+                        <form method="POST" action="telaVenda.php">
+                            Moldelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+
+                            <input type="hidden" name="id" value="<?=$auto['automoveis_id']?>">
+                            <input type="hidden" name="automoveis_modelo" value="<?=$auto['automoveis_modelo']?>">
+                            <input type="submit" value="Vender">
+                        </form>
                     <?php endforeach; ?>
                 <?php }  else { ?>
                     Nenhum Automovel
@@ -77,7 +85,7 @@
             <div class="area <?php echo (empty($area_3)) ? 'vazio' : '';?> " data-info='
                 <?php if(!empty($area_3)) {
                     foreach($area_3 as $auto) { ?> 
-                        Modelo: <?=$auto['modelo']?> | Preço: R$<?=$auto['preco']?> <br>
+                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
                     <?php } ?>
                 <?php } else { ?>
                     Nenhum Automovel na Area
@@ -88,7 +96,7 @@
             <div class="area <?php echo (empty($area_4)) ? 'vazio': '';?> " data-info='
                 <?php if(!empty($area_4)) {
                     foreach($area_4 as $auto): ?>
-                        Modelo: <?=$auto['modelo']?> | Preço: R$<?=$auto['preco']?> <br>
+                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
                     <?php endforeach; ?>
                 <?php } else { ?>
                     Nenhum Automovel
@@ -99,7 +107,7 @@
             <div class="area <?php echo (empty($area_5)) ? 'vazio': '';?>" data-info="
                 <?php if(!empty($area_5)) {
                     foreach($area_5 as $auto): ?>
-                        Modelo: <?=$auto['modelo']?> | Preço: R$<?=$auto['preco']?> <br>
+                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
                     <?php endforeach; ?>
                 <?php } else { ?>
                     Nenhum Automovel
@@ -110,7 +118,7 @@
             <div class="area <?php echo (empty($area_6)) ? 'vazio': '';?>" data-info="
                 <?php if(!empty($area_6)) {
                     foreach($area_6 as $auto): ?>
-                        Modelo: <?=$auto['modelo']?> | Preço: R$<?=$auto['preco']?> <br>
+                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
                     <?php endforeach; ?>
                 <?php } else { ?> 
                         Nenhum Automovel
@@ -120,7 +128,7 @@
             <div class="area <?php echo (empty($area_7)) ? 'vazio': '';?> " data-info="
                 <?php if(!empty($area_7)) {
                     foreach($area_7 as $auto): ?>
-                        Modelo: <?=$auto['modelo']?> | Preço: R$<?=$auto['preco']?> <br>
+                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
                     <?php endforeach; ?>
                 <?php } else { ?> 
                         Nenhum Automovel
@@ -131,7 +139,7 @@
             <div class="area <?php echo (empty($area_8)) ? 'vazio': '';?> " data-info="
                 <?php if(!empty($area_8)) {
                     foreach($area_8 as $auto): ?>
-                        Modelo: <?=$auto['modelo']?> | Preço: R$<?=$auto['preco']?> <br>
+                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
                     <?php endforeach; ?>
                 <?php } else { ?> 
                         Nenhum Automovel
@@ -142,7 +150,7 @@
             <div class="area <?php echo (empty($area_9)) ? 'vazio': '';?>" data-info="
                 <?php if(!empty($area_9)) {
                     foreach($area_9 as $auto): ?>
-                        Modelo: <?=$auto['modelo']?> | Preço: R$<?=$auto['preco']?> <br>
+                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
                    <?php endforeach; ?>
                 <?php } else { ?> 
                         Nenhum Automovel
@@ -153,7 +161,7 @@
             <div class="area <?php echo (empty($area_10)) ? 'vazio': '';?>" data-info="
                 <?php if(!empty($area_10)) {
                     foreach($area_10 as $auto): ?>
-                        Modelo: <?=$auto['modelo']?> | Preço: R$<?=$auto['preco']?> <br>
+                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
                     <?php endforeach; ?>
                 <?php } else { ?> 
                         Nenhum Automovel

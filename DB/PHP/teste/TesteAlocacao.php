@@ -13,11 +13,18 @@
     // foreach($area as $registro) {
     //     echo 'Area: '. $registro['area']. '| '. 'Automovel: '. $registro['automovel']. '<br>';
     // }
-
-    $areaRelacionada = $Alocacao->BuscaRelacionada(10);
-    foreach($areaRelacionada as $registro) {
-        // echo 'Area: '. $registro['area']. ' | '. 'Modelo: '. $registro['modelo']. ' | '. 'Preço: R$'. $registro['preco']. '<br>';
-        var_dump($registro['id']);
-    }
     
+    $BuscarTudo = $Alocacao->BuscarTabelas(1);
+    foreach($BuscarTudo as $auto) {
+        // echo 'Area: '. $auto['area']. ' | '. 'Modelo: '. $auto['modelo']. ' | '. 'Preço: R$'. $auto['preco'] . ' | '. 'Concessionaria: '. $auto['concessionaria']. ' | '. 'Quantidade: '. $auto['quantidade']. '<br>';
+
+        // echo 'Id-Alocacao: '. $auto['alocacao_id']. '<br>'; 
+        // echo 'Id-Automoveis: '. $auto['automoveis_id']. '<br>';
+        // echo 'Id-Concessionarias: '. $auto['concessionarias_id']. '<br>';      
+
+        // var_dump($auto['alocacao_id']);
+        // var_dump($auto['automoveis_id']);
+        // var_dump($auto['concessionarias_id']);
+    }
+    // var_dump($BuscarTudo, '<br>');
 ?>

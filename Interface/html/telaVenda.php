@@ -11,8 +11,10 @@
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        $id = $_POST['id'];
-        $modelo = $_POST['modelo'];
+        $Automovel_id = $_POST['automoveis_id'];
+        $Automovel_modelo = $_POST['automoveis_modelo'];
+        $Concessionaria_nome = $_POST['concessionarias_nome'];
+        $Concessionaria_id = $_POST['concessionarias_id'];
     }
 ?>
 
@@ -32,9 +34,11 @@
             <form method="POST">
                 <fieldset>
                     <legend> Venda </legend>
+
                     <div class="nomeModelo">
-                        <p> <?= $modelo ?> </p>
+                        <p> <?= $Automovel_modelo ?> </p>
                     </div>
+
                     <div class="cliente">
                         <label for="cliente"> Clientes: </label>
                         <select name="cliente" id="cliente">
@@ -44,19 +48,20 @@
                             <?php } ?>
                         </select>
                     </div>
+                    
                     <div class="concessionaria">
                         <label for="concessionaria"> Concessionaria: </label>
                         <select name="concesionaria" id="concessionaria">
                             <option value=""> Selecione </option>
-                                <?php foreach($listCon as $con) { ?> 
-                                    <option value=" <?=$con['id']?> "> <?=$con['concessionaria']?> </option>
-                            <?php } ?>
+                                <option value="<?=$Concessionaria_id?>"> <?=$Concessionaria_nome?></option>
                         </select>
                     </div>
+
                     <div class="btn">
-                        <input type="hidden" value="<?= $id ?>">
+                        <input type="hidden" value="<?= $Automovel_id ?>">
                         <input type="submit" value="Confirmar" class="buttom">
                     </div>
+                    
                 </fieldset>
             </form>
         </div>
