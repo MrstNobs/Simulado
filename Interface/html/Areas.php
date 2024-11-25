@@ -87,7 +87,15 @@
             <div class="area <?php echo (empty($area_3)) ? 'vazio' : '';?> " data-info='
                 <?php if(!empty($area_3)) {
                     foreach($area_3 as $auto) { ?> 
-                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+                        <form method="POST" action="telaVenda.php">
+                            Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+
+                            <input type="hidden" name="automoveis_id" value="<?=$auto['automoveis_id']?>">
+                            <input type="hidden" name="automoveis_modelo" value="<?=$auto['automoveis_modelo']?>">
+                            <input type="hidden" name="concessionarias_id" value="<?=$auto['concessionarias_id'] ?>">
+                            <input type="hidden" name="concessionarias_nome" value="<?=$auto['concessionarias_nome']?>">
+                            <input type="submit" value="Vender">
+                        </form>
                     <?php } ?>
                 <?php } else { ?>
                     Nenhum Automovel na Area
@@ -98,7 +106,15 @@
             <div class="area <?php echo (empty($area_4)) ? 'vazio': '';?> " data-info='
                 <?php if(!empty($area_4)) {
                     foreach($area_4 as $auto): ?>
-                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+                        <form method="POST" action="telaVenda.php">
+                            Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+
+                            <input type="hidden" name="automoveis_id" value="<?=$auto['automoveis_id']?>">
+                            <input type="hidden" name="automoveis_modelo" value="<?=$auto['automoveis_modelo']?>">
+                            <input type="hidden" name="concessionarias_id" value="<?=$auto['concessionarias_id'] ?>">
+                            <input type="hidden" name="concessionarias_nome" value="<?=$auto['concessionarias_nome']?>">
+                            <input type="submit" value="Vender">
+                        </form>
                     <?php endforeach; ?>
                 <?php } else { ?>
                     Nenhum Automovel
@@ -106,69 +122,117 @@
             '>Area 4</div>
 
             <!-- O processo se repte  -->
-            <div class="area <?php echo (empty($area_5)) ? 'vazio': '';?>" data-info="
+            <div class="area <?php echo (empty($area_5)) ? 'vazio': '';?>" data-info='
                 <?php if(!empty($area_5)) {
                     foreach($area_5 as $auto): ?>
-                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+                        <form method="POST" action="telaVenda.php">
+                            Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+
+                            <input type="hidden" name="automoveis_id" value="<?=$auto['automoveis_id']?>">
+                            <input type="hidden" name="automoveis_modelo" value="<?=$auto['automoveis_modelo']?>">
+                            <input type="hidden" name="concessionarias_id" value="<?=$auto['concessionarias_id'] ?>">
+                            <input type="hidden" name="concessionarias_nome" value="<?=$auto['concessionarias_nome']?>">
+                            <input type="submit" value="Vender">
+                        </form>
                     <?php endforeach; ?>
                 <?php } else { ?>
                     Nenhum Automovel
                     <?php } ?>
-            ">Area 5</div>
+            '>Area 5</div>
 
             <!-- O processo se repte  -->
-            <div class="area <?php echo (empty($area_6)) ? 'vazio': '';?>" data-info="
+            <div class="area <?php echo (empty($area_6)) ? 'vazio': '';?>" data-info='
                 <?php if(!empty($area_6)) {
                     foreach($area_6 as $auto): ?>
-                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+                        <form method="POST" action="telaVenda.php">
+                            Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+
+                            <input type="hidden" name="automoveis_id" value="<?=$auto['automoveis_id']?>">
+                            <input type="hidden" name="automoveis_modelo" value="<?=$auto['automoveis_modelo']?>">
+                            <input type="hidden" name="concessionarias_id" value="<?=$auto['concessionarias_id'] ?>">
+                            <input type="hidden" name="concessionarias_nome" value="<?=$auto['concessionarias_nome']?>">
+                            <input type="submit" value="Vender">
+                        </form>
                     <?php endforeach; ?>
                 <?php } else { ?> 
                         Nenhum Automovel
                     <?php } ?>
-            ">Area 6</div>
+            '>Area 6</div>
 
-            <div class="area <?php echo (empty($area_7)) ? 'vazio': '';?> " data-info="
+            <div class="area <?php echo (empty($area_7)) ? 'vazio': '';?> " data-info='
                 <?php if(!empty($area_7)) {
                     foreach($area_7 as $auto): ?>
-                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+                        <form method="POST" action="telaVenda.php">
+                            Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+
+                            <input type="hidden" name="automoveis_id" value="<?=$auto['automoveis_id']?>">
+                            <input type="hidden" name="automoveis_modelo" value="<?=$auto['automoveis_modelo']?>">
+                            <input type="hidden" name="concessionarias_id" value="<?=$auto['concessionarias_id'] ?>">
+                            <input type="hidden" name="concessionarias_nome" value="<?=$auto['concessionarias_nome']?>">
+                            <input type="submit" value="Vender">
+                        </form>
                     <?php endforeach; ?>
                 <?php } else { ?> 
                         Nenhum Automovel
                     <?php } ?>
-            ">Area 7</div>
+            '>Area 7</div>
 
             <!-- O processo se repte  -->
-            <div class="area <?php echo (empty($area_8)) ? 'vazio': '';?> " data-info="
+            <div class="area <?php echo (empty($area_8)) ? 'vazio': '';?> " data-info='
                 <?php if(!empty($area_8)) {
                     foreach($area_8 as $auto): ?>
-                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+                        <form method="POST" action="telaVenda.php">
+                            Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+
+                            <input type="hidden" name="automoveis_id" value="<?=$auto['automoveis_id']?>">
+                            <input type="hidden" name="automoveis_modelo" value="<?=$auto['automoveis_modelo']?>">
+                            <input type="hidden" name="concessionarias_id" value="<?=$auto['concessionarias_id'] ?>">
+                            <input type="hidden" name="concessionarias_nome" value="<?=$auto['concessionarias_nome']?>">
+                            <input type="submit" value="Vender">
+                        </form>
                     <?php endforeach; ?>
                 <?php } else { ?> 
                         Nenhum Automovel
                     <?php } ?>
-            ">Area 8</div>
+            '>Area 8</div>
 
             <!-- O processo se repte  -->
-            <div class="area <?php echo (empty($area_9)) ? 'vazio': '';?>" data-info="
+            <div class="area <?php echo (empty($area_9)) ? 'vazio': '';?>" data-info='
                 <?php if(!empty($area_9)) {
                     foreach($area_9 as $auto): ?>
-                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+                        <form method="POST" action="telaVenda.php">
+                            Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+
+                            <input type="hidden" name="automoveis_id" value="<?=$auto['automoveis_id']?>">
+                            <input type="hidden" name="automoveis_modelo" value="<?=$auto['automoveis_modelo']?>">
+                            <input type="hidden" name="concessionarias_id" value="<?=$auto['concessionarias_id'] ?>">
+                            <input type="hidden" name="concessionarias_nome" value="<?=$auto['concessionarias_nome']?>">
+                            <input type="submit" value="Vender">
+                        </form>
                    <?php endforeach; ?>
                 <?php } else { ?> 
                         Nenhum Automovel
                     <?php } ?>
-            ">Area 9</div>
+            '>Area 9</div>
 
             <!-- O processo se repte  -->
-            <div class="area <?php echo (empty($area_10)) ? 'vazio': '';?>" data-info="
+            <div class="area <?php echo (empty($area_10)) ? 'vazio': '';?>" data-info='
                 <?php if(!empty($area_10)) {
                     foreach($area_10 as $auto): ?>
-                        Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+                        <form method="POST" action="telaVenda.php">
+                            Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+
+                            <input type="hidden" name="automoveis_id" value="<?=$auto['automoveis_id']?>">
+                            <input type="hidden" name="automoveis_modelo" value="<?=$auto['automoveis_modelo']?>">
+                            <input type="hidden" name="concessionarias_id" value="<?=$auto['concessionarias_id'] ?>">
+                            <input type="hidden" name="concessionarias_nome" value="<?=$auto['concessionarias_nome']?>">
+                            <input type="submit" value="Vender">
+                        </form>
                     <?php endforeach; ?>
                 <?php } else { ?> 
                         Nenhum Automovel
                     <?php } ?>
-            ">Area 10</div>
+            '>Area 10</div>
         </div>
 
         <!-- Janela lateral onde ficará as informações dos automoveis -->

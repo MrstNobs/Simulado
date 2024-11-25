@@ -8,6 +8,7 @@
 
     // Verifica se o FORM do arquivo 'telaVenda.php' foi enviado como POST
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
         // pegas as informações do arquivo 'telaVenda.php' com $_POST[atributo] e joga na variavel
         $cliente = $_POST['cliente'];
         $AutomovelID = $_POST['AutomovelID'];
@@ -22,6 +23,7 @@
             // Mostra na tela caso de tudo certo
             echo "<h1>DADOS INSERIDOS COM SUCCESO NO BANCO DE DADOS!!!! :D";
         } else {
+            
             // Caso a verificação das variavels estivessem faltando, nem que seja um, mostra na tela
             echo "VOLTE E PREENCHA TODOS OS CAMPOS  >:(";
         }

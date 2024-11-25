@@ -8,7 +8,8 @@ const infoBoxContainer = document.getElementById('infoBoxContainer');   // selec
 // faz um varredura verificnado cada area{classe} e cada uma delas se atribuindo a varial 'area' dentro dos paramentro
 areas.forEach(area => {
     // Adiciona o evento de clique sáreas
-    area.addEventListener('click', () => {
+    area.addEventListener('click', (e) => {
+        e.preventDefault();
         // Obtém as informações da área clicada
         const areaInfo = area.getAttribute('data-info');  // pega as informçãoes que estaõ dentro do atributo data-info que contem o PHP e joga na variavel
         const areaName = area.textContent;  // Pegar o nome que mostra na tela e joga na variavel
