@@ -69,10 +69,12 @@
                 <?php if(!empty($area_2)) {
                     foreach($area_2 as $auto): ?>
                         <form method="POST" action="telaVenda.php">
-                            Moldelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
+                            Modelo: <?=$auto['automoveis_modelo']?> | Preço: R$<?=$auto['automoveis_preco']?> <br>
 
-                            <input type="hidden" name="id" value="<?=$auto['automoveis_id']?>">
+                            <input type="hidden" name="automoveis_id" value="<?=$auto['automoveis_id']?>">
                             <input type="hidden" name="automoveis_modelo" value="<?=$auto['automoveis_modelo']?>">
+                            <input type="hidden" name="concessionarias_id" value="<?=$auto['concessionarias_id'] ?>">
+                            <input type="hidden" name="concessionarias_nome" value="<?=$auto['concessionarias_nome']?>">
                             <input type="submit" value="Vender">
                         </form>
                     <?php endforeach; ?>

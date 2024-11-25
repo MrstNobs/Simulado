@@ -16,6 +16,22 @@
             }
         }
 
+        public function Inserir($cliente, $concessionaria, $automovel) {
+            try {
+                $pdo = Conexao::getConexao();
+                $sql = "INSERT INTO venda (cliente, concessionaria, automovel) VALUES (:cliente, :concessionaria, :automovel)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->bindParam(':cliente', $cliente);
+                $stmt->bindParam(':concessionaria', $concessionaria);
+                $stmt->bindParam(':automovel', $automovel);
+                $stmt->execute();
+                return 'Inserido com sucesso';
+            } catch(Exception $e) {
+                die("ERRO AO TENTAR INSERIR ESTES DADOS - ERRO ABAIXO - <br>". $e->getMessage());
+                return false;
+            }
+        }
+
     }
 
 ?>

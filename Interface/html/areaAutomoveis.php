@@ -4,16 +4,16 @@
 
   $alocacao = new Alocacao();
 
-  $area1 = $alocacao->BuscaRelacionada(1);
-  $area2 = $alocacao->BuscaRelacionada(2);
-  $area3 = $alocacao->BuscaRelacionada(3);
-  $area4 = $alocacao->BuscaRelacionada(4);
-  $area5 = $alocacao->BuscaRelacionada(5);
-  $area6 = $alocacao->BuscaRelacionada(6);
-  $area7 = $alocacao->BuscaRelacionada(7);
-  $area8 = $alocacao->BuscaRelacionada(8);
-  $area9 = $alocacao->BuscaRelacionada(9);
-  $area10 = $alocacao->BuscaRelacionada(10);
+//   $area1 = $alocacao->BuscaRelacionada(1);
+//   $area2 = $alocacao->BuscaRelacionada(2);
+//   $area3 = $alocacao->BuscaRelacionada(3);
+//   $area4 = $alocacao->BuscaRelacionada(4);
+//   $area5 = $alocacao->BuscaRelacionada(5);
+//   $area6 = $alocacao->BuscaRelacionada(6);
+//   $area7 = $alocacao->BuscaRelacionada(7);
+//   $area8 = $alocacao->BuscaRelacionada(8);
+//   $area9 = $alocacao->BuscaRelacionada(9);
+//   $area10 = $alocacao->BuscaRelacionada(10);
 
 ?>
 
