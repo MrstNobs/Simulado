@@ -239,7 +239,7 @@
         <!-- é criado uma div com uma class info-box-container ou caixa de conteiner de informacao com o id de mesmo nome -->
         <div class="info-box-container" id="infoBoxContainer">
             <!-- Abri-se um formulario com uma classe e id -->
-            <form class="info-box" id="infoBox">
+            <form method="POST" action="./telaVenda.php" class="info-box" id="infoBox">
                 <!-- Mostra no topo da janela qual area esta (isso será visto no javascript) -->
                 <h3 id="infoTitle">Informações</h3>
                 <!-- Aqui ficará as informações do atributo data-info (isso sera visto no javascript) -->
