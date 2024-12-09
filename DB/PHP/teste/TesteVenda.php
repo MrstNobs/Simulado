@@ -2,11 +2,13 @@
     include_once '../model/Conexao.php';
     include_once '../model/venda.php';
     include_once '../model/cliente.php';
+    include_once '../model/alocacao.php';
     include_once '../model/automovel.php';
     include_once '../model/concessionaria.php';
 
     $Venda = new Venda();
     $Cliente = new Cliente();
+    $Alocacao = new Alocacao();
     $Automovel = new Automovel();
     $Concessionaria = new Concessionaria();
 

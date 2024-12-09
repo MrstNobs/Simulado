@@ -22,8 +22,8 @@
                 $sql = "INSERT INTO venda (cliente, concessionaria, automovel) VALUES (:cliente, :concessionaria, :automovel)";
                 $stmt = $pdo->prepare($sql);
                 $stmt->bindParam(':cliente', $cliente);
-                $stmt->bindParam(':concessionaria', $concessionaria);
                 $stmt->bindParam(':automovel', $automovel);
+                $stmt->bindParam(':concessionaria', $concessionaria);
                 $stmt->execute();
                 return 'Inserido com sucesso';
             } catch(Exception $e) {
